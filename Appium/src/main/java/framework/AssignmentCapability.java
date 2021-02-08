@@ -19,7 +19,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 
-public class Capability {
+public class AssignmentCapability {
 
 	protected static String appPackage;
 	protected static String appActivity;
@@ -68,7 +68,7 @@ public class Capability {
 	public static AndroidDriver<AndroidElement> capablities(String appPackage, String appActivity, String deviceName,
 			String platformName, String chromeExecutable) throws IOException, InterruptedException {
 
-		FileReader fis = new FileReader(System.getProperty("user.dir") + "\\src\\main\\java\\global.properties");
+		FileReader fis = new FileReader(System.getProperty("user.dir") + "\\src\\main\\java\\assignment.properties");
 		Properties pro = new Properties();
 		pro.load(fis);
 		appPackage = pro.getProperty("appPackage");
